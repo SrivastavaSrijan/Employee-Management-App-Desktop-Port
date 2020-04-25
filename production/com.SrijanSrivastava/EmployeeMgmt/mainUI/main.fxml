@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="maxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="346.0" prefWidth="600.0" styleClass="MainPane" stylesheets="@../unDark.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EmployeeMgmt.mainUI.mainUIController">
+    <JFXTabPane layoutX="-2.0" layoutY="76.0" prefHeight="270.0" prefWidth="600.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="76.0">
+        <tabs>
+            <Tab>
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="549.0">
+                        <children>
+                            <VBox layoutY="-3.0" prefHeight="306.0" prefWidth="58.0">
+                                <children>
+                                    <JFXButton fx:id="addButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY"
+                                               onMouseClicked="#loadAddEmployee" prefHeight="57.0" prefWidth="62.0"
+                                               styleClass="Buttons">
+                                        <graphic>
+                                            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="25"/>
+                                        </graphic>
+                                        <font>
+                                            <Font name="Trebuchet MS" size="12.0"/>
+                                        </font>
+                                        <tooltip>
+                                            <Tooltip text="Add Employee">
+                                                <font>
+                                                    <Font name="Trebuchet MS" size="12.0"/>
+                                                </font>
+                                            </Tooltip>
+                                        </tooltip>
+                                        <VBox.margin>
+                                            <Insets top="5.0"/>
+                                        </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="displayButton" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY"
+                                               layoutX="10.0" layoutY="20.0" onMouseClicked="#loadDisplayEmployee"
+                                               prefHeight="57.0" prefWidth="62.0" styleClass="Buttons" text="Button">
+                                        <graphic>
+                                            <FontAwesomeIconView fill="WHITE" glyphName="TV" size="25" text=""/>
+                                        </graphic>
+                                        <font>
+                                            <Font name="Trebuchet MS" size="12.0"/>
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets top="20.0"/>
+                                        </VBox.margin>
+                                        <tooltip>
+                                            <Tooltip text="Display Employees"/>
+                                        </tooltip>
+                                    </JFXButton>
+                                    <JFXButton fx:id="FAQButt" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY"
+                                               layoutX="10.0" layoutY="136.0" onAction="#showFAQ" prefHeight="57.0"
+                                               prefWidth="62.0" styleClass="Buttons">
+                                        <graphic>
+                                            <FontAwesomeIconView fx:id="FAQIcon" fill="WHITE" glyphName="QUESTION"
+                                                                 size="25"/>
+                                        </graphic>
+                                        <font>
+                                            <Font name="Trebuchet MS" size="12.0"/>
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets top="20.0"/>
+                                        </VBox.margin>
+                                        <tooltip>
+                                            <Tooltip text="Created by Srijan Srivasatva"/>
+                                        </tooltip>
+                                        <padding>
+                                            <Insets bottom="20.0"/>
+                                        </padding>
+                                    </JFXButton>
+                                    <JFXButton fx:id="changeThemeButt" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY"
+                                               layoutX="10.0" layoutY="78.0" onMouseClicked="#doEdit" prefHeight="57.0"
+                                               prefWidth="62.0" styleClass="Buttons" text="Button" visible="false">
+                                        <graphic>
+                                            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" onMousePressed="#doEdit"
+                                                                 selectionEnd="0" size="25"/>
+                                        </graphic>
+                                        <font>
+                                            <Font name="Trebuchet MS" size="12.0"/>
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets top="10.0"/>
+                                        </VBox.margin>
+                                        <tooltip>
+                                            <Tooltip text="Edit Employees"/>
+                                        </tooltip>
+                                    </JFXButton>
+                                </children>
+                                <padding>
+                                    <Insets bottom="10.0" right="10.0" top="10.0"/>
+                                </padding>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </content>
+                <graphic>
+                    <FontAwesomeIconView glyphName="EDIT" selectionEnd="0" size="20" textAlignment="CENTER"
+                                         translateX="-50.0"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Process Employees"/>
+                </tooltip>
+            </Tab>
+            <Tab>
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                </content>
+                <graphic>
+                    <FontAwesomeIconView glyphName="GEAR" size="20" textAlignment="JUSTIFY" translateX="-50.0"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="Settings"/>
+                </tooltip>
+            </Tab>
+            <Tab>
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="561.0">
+                        <children>
+                            <Text layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text"
+                                  text="Created by Srijan Srivastava with a lot of Java, as evident in the source code available at my Git and my heart palpitations during the development of this project."
+                                  wrappingWidth="261.60009765625">
+                                <font>
+                                    <Font name="Trebuchet MS" size="12.0"/>
+                                </font>
+                            </Text>
+                            <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text"
+                                  text="About Me" wrappingWidth="204.5367431640625">
+                                <font>
+                                    <Font name="Trebuchet MS Italic" size="31.0"/>
+                                </font>
+                            </Text>
+                        </children>
+                    </AnchorPane>
+                </content>
+                <graphic>
+                    <FontAwesomeIconView glyphName="HEART" size="20" text="" textAlignment="CENTER"
+                                         translateX="-50.0"/>
+                </graphic>
+                <tooltip>
+                    <Tooltip text="About Me"/>
+                </tooltip>
+            </Tab>
+        </tabs>
+    </JFXTabPane>
+    <AnchorPane layoutY="30.0" prefHeight="46.0" prefWidth="600.0" styleClass="MidPane"/>
+    <BorderPane prefHeight="28.0" prefWidth="600.0" styleClass="BorderPane">
+        <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="174.0" BorderPane.alignment="CENTER">
+                <JFXCheckBox fx:id="checkBox" alignment="BOTTOM_RIGHT" checkedColor="#2c2c2c" contentDisplay="CENTER"
+                             prefHeight="10.0" prefWidth="10.0" styleClass="BorderIcons" text=" "
+                             unCheckedColor="#ffeaea">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ADJUST" onMouseClicked="#max" size="10"
+                                             styleClass="BorderIcons" translateX="-2.0"
+                                             wrappingWidth="6.857142925262451"/>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </JFXCheckBox>
+                <FontAwesomeIconView fill="WHITE" glyphName="MAP_PIN" onMouseClicked="#max" size="15"
+                                     styleClass="BorderIcons" wrappingWidth="6.857142925262451">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="15.0" top="10.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#min" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets left="5.0" right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+            </HBox>
+        </right>
+        <left>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Employee Management"
+                  textAlignment="CENTER" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="4.0"/>
+                </BorderPane.margin>
+                <font>
+                    <Font name="Trebuchet MS Italic" size="21.0"/>
+                </font>
+            </Text>
+        </left>
+    </BorderPane>
+</AnchorPane>

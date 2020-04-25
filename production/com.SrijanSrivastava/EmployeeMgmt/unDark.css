@@ -1,0 +1,157 @@
+.MainPane{
+-fx-background-color: #E1E2E1;
+}
+.MidPane{
+ -fx-background-color:#1de9b6;
+}
+.BorderPane{
+ -fx-background-color:#00b686;
+}
+.Buttons{
+    -fx-background-color: #1DE9B6;
+    -fx-padding: 0.7em 0.57em;
+    -fx-cursor:hand;
+}
+.BorderIcons{
+     -fx-cursor:hand;
+}
+
+.jfx-tab-pane:top .depth-container .tab-header-area .tab-header-background{
+    -fx-background-color: #1DE9B6;
+
+}
+.jfx-tab-pane .tab .tab-label {
+                 -fx-alignment: CENTER;
+                 -fx-text-fill: black   ;
+                  -fx-font-family: "Trebuchet MS";
+                 -fx-font-size: 14px; /* before it was 12px */
+                  -fx-font-style: italic;
+                 -fx-padding: 0.5em 2em 0.5em 10em;
+                 -fx-wrap-text: true;
+                 -fx-cursor:hand;
+ }
+ .jfx-tab-pane .tab:hover .tab-label{
+
+ 	-fx-background-color:#00b686;
+ 	-fx-background-radius: 0.0;
+ }
+ .jfx-tab-pane .tab:click .tab-label{
+
+  	-fx-background-color:#00b686;
+  	-fx-background-radius: 0.0;
+  }
+ .jfx-tab-pane .tab-selected-line { -fx-background-color:  transparent; }
+.button-raised{
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(77,102,204);
+    -fx-pref-width: 200;
+    -fx-text-fill: WHITE;
+}
+.Text{
+    -fx-fill:#263238;
+    -fx-prompt-text-fill:#607D8B;
+     -fx-text-fill:#000000;
+
+}
+.BorderText{
+    -fx-fill:#FFFFFF;
+}
+.jfx-text-field
+{
+    -jfx-focus-color: #263238;
+    /*-jfx-unfocus-color: #fffd8c; doesn't work*/
+}
+.jfx-check-box{
+    -jfx-unchecked-color:#263238;
+}
+
+.text-field
+{
+
+    -fx-prompt-text-fill: #000000; /*Yellow - floating label*/
+    -fx-text-fill:#000A12; /*Yellow - input color*/
+    -fx-highlight-fill: #CF6679; /*Green*/
+}
+}
+.text-field .input-line
+{
+    -fx-background-color: #000000; /*Yellow - bottom bar*/
+}
+.glyph-icon{
+    -fx-font-family:"FontAwesome";
+    -fx-fill:#263238;
+ }
+  .jfx-button{
+  -fx-text-fill:#263238;
+  }
+
+
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+
+    -fx-background-color:#1de9b6;
+}
+.Filler{
+    -fx-background-color: #1de9b6;
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #263238;;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+
+}
+
+.table-row-cell{
+    -fx-background-color:#BBBBBB;
+    -fx-table-cell-border-color: #000000;
+    -fx-background-insets: 0, 0 0 1 0;
+
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #E1E2E1;
+    -fx-table-cell-border-color:#000000;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #607D8B;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .filler {
+    -fx-background-color:  #1de9b6;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
