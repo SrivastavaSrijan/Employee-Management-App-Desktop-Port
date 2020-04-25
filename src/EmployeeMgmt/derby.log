@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 06 11:18:01 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0170-ae62-e4e2-000006678400 
+on database directory C:\Users\srija\IdeaProjects\JavaFXPractice\src\EmployeeMgmt\databaseStorage with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@15975490 
+Loaded from file:/C:/Users/srija/IdeaProjects/Tools/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11+28
+user.dir=C:\Users\srija\IdeaProjects\JavaFXPractice\src\EmployeeMgmt
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

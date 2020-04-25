@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="maxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="249.0" prefWidth="400.0" styleClass="MainPane" stylesheets="@../unDark.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EmployeeMgmt.loginUI.loginUIController">
+    <AnchorPane layoutY="28.0" prefHeight="62.0" prefWidth="400.0" styleClass="MidPane"/>
+    <BorderPane prefHeight="30.0" prefWidth="400.0" styleClass="BorderPane">
+        <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="174.0" BorderPane.alignment="CENTER">
+
+                <JFXCheckBox fx:id="checkBox" alignment="BOTTOM_RIGHT" checkedColor="#2c2c2c" contentDisplay="CENTER"
+                             prefHeight="10.0" prefWidth="10.0" styleClass="BorderIcons" text=" "
+                             unCheckedColor="#ffeaea">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ADJUST" onMouseClicked="#max" size="10"
+                                             styleClass="BorderIcons" translateX="-2.0"
+                                             wrappingWidth="6.857142925262451"/>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </JFXCheckBox>
+                <FontAwesomeIconView fill="WHITE" glyphName="MAP_PIN" onMouseClicked="#max" size="15"
+                                     styleClass="BorderIcons" wrappingWidth="6.857142925262451">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="15.0" top="10.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#min" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets left="5.0" right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+            </HBox>
+        </right>
+        <left>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Login Screen"
+                  textAlignment="CENTER" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="4.0"/>
+                </BorderPane.margin>
+                <font>
+                    <Font name="Trebuchet MS Italic" size="21.0"/>
+                </font>
+            </Text>
+        </left>
+    </BorderPane>
+    <VBox layoutX="88.0" layoutY="109.0" prefHeight="91.0" prefWidth="38.0">
+        <children>
+            <FontAwesomeIconView glyphName="USER" size="15">
+                <VBox.margin>
+                    <Insets left="15.0"/>
+                </VBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="PasswordIcon" glyphName="KEY" layoutX="10.0" layoutY="20.0" size="15">
+                <VBox.margin>
+                    <Insets left="15.0" top="47.0"/>
+                </VBox.margin>
+            </FontAwesomeIconView>
+        </children>
+    </VBox>
+    <VBox layoutX="115.0" layoutY="104.0" prefHeight="91.0" prefWidth="170.0">
+        <children>
+            <JFXTextField fx:id="UsernameField" prefHeight="26.0" prefWidth="252.0" promptText="Username">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="PasswordField" prefWidth="174.0" promptText="Password" unFocusColor="#010101">
+                <VBox.margin>
+                    <Insets top="35.0"/>
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+            </JFXPasswordField>
+        </children>
+    </VBox>
+    <HBox layoutX="100.0" layoutY="200.0" prefHeight="30.0" prefWidth="200.0">
+        <children>
+            <JFXButton fx:id="LoginButton" onAction="#handleLogin" prefHeight="26.0" prefWidth="76.0"
+                       styleClass="Buttons" text="Login" textFill="WHITE">
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="SIGN_IN"/>
+                </graphic>
+                <HBox.margin>
+                    <Insets top="10.0"/>
+                </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="ForgotPassButton" onMousePressed="#doHint" prefHeight="26.0" prefWidth="76.0"
+                       styleClass="Buttons" text="Hint" textFill="WHITE">
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="QUESTION"/>
+                </graphic>
+                <HBox.margin>
+                    <Insets left="50.0" top="10.0"/>
+                </HBox.margin>
+            </JFXButton>
+        </children>
+    </HBox>
+</AnchorPane>

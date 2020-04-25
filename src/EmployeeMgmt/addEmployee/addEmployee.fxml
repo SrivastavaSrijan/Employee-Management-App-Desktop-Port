@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="maxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="569.0" prefWidth="442.0" styleClass="MainPane" stylesheets="@../unDark.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EmployeeMgmt.addEmployee.addEmployeeController">
+    <AnchorPane layoutY="28.0" prefHeight="50.0" prefWidth="442.0" styleClass="MidPane"/>
+    <BorderPane prefHeight="30.0" prefWidth="442.0" styleClass="BorderPane">
+        <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="174.0" BorderPane.alignment="CENTER">
+
+                <JFXCheckBox fx:id="checkBox" alignment="BOTTOM_RIGHT" checkedColor="#2c2c2c" contentDisplay="CENTER"
+                             prefHeight="10.0" prefWidth="10.0" styleClass="BorderIcons" text=" "
+                             unCheckedColor="#ffeaea">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ADJUST" onMouseClicked="#max" size="10"
+                                             styleClass="BorderIcons" translateX="-2.0"
+                                             wrappingWidth="6.857142925262451"/>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </JFXCheckBox>
+                <FontAwesomeIconView fill="WHITE" glyphName="MAP_PIN" onMouseClicked="#max" size="15"
+                                     styleClass="BorderIcons" wrappingWidth="6.857142925262451">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="15.0" top="10.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView glyphName="RANDOM" onMouseClicked="#showRandoms" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="20.0" top="10.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#min" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets left="5.0" right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+            </HBox>
+        </right>
+        <left>
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text"
+                  text="Add Employee" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="4.0"/>
+                </BorderPane.margin>
+                <font>
+                    <Font name="Trebuchet MS Italic" size="21.0"/>
+                </font>
+            </Text>
+        </left>
+    </BorderPane>
+    <VBox layoutX="32.0" layoutY="97.0" prefHeight="398.0" prefWidth="375.0">
+        <children>
+            <JFXTextField fx:id="idField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="140.0"
+                          promptText="Enter ID" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+            </JFXTextField>
+            <JFXTextField fx:id="fNameField" focusColor="#bb86fc" labelFloat="true" promptText="Enter First Name"
+                          styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="lNameField" focusColor="#bb86fc" labelFloat="true" promptText="Enter Last Name"
+                          styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="rankField" focusColor="#bb86fc" labelFloat="true" promptText="Enter Rank"
+                          styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="addressField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="56.0"
+                          promptText="Enter Address" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="dojField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="10.0"
+                          promptText="Enter DOJ" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="uniField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="53.0"
+                          promptText="Enter University" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="fieldField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="96.0"
+                          promptText="Enter Field" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="titleField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="140.0"
+                          promptText="Enter Title" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="salaryField" focusColor="#bb86fc" labelFloat="true" layoutX="10.0" layoutY="183.0"
+                          promptText="Enter Salary" styleClass="Text" unFocusColor="WHITE">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets top="20.0"/>
+                </VBox.margin>
+            </JFXTextField>
+        </children>
+    </VBox>
+    <HBox layoutX="116.0" layoutY="519.0" prefHeight="23.0" prefWidth="206.0">
+        <children>
+            <JFXButton fx:id="saveButton" onMouseClicked="#addEmployeeAction" prefHeight="26.0" prefWidth="72.0"
+                       ripplerFill="#8bc34a" styleClass="Buttons" text="Save" textFill="WHITE">
+                <HBox.margin>
+                    <Insets right="10.0"/>
+                </HBox.margin>
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="SAVE" selectionEnd="0" translateX="-10.0"/>
+                </graphic>
+            </JFXButton>
+            <JFXButton fx:id="cancelButton" layoutX="60.0" layoutY="10.0" onMouseClicked="#cancel" prefHeight="26.0"
+                       prefWidth="70.0" ripplerFill="#ff5722" styleClass="Buttons" text="Exit" textFill="WHITE">
+                <HBox.margin>
+                    <Insets left="50.0"/>
+                </HBox.margin>
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="REPLY" translateX="-10.0"/>
+                </graphic>
+            </JFXButton>
+        </children>
+    </HBox>
+</AnchorPane>

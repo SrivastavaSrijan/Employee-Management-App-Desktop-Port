@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="maxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="348.0" prefWidth="801.0" styleClass="MainPane" stylesheets="@../unDark.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="EmployeeMgmt.displayBook.displayBookController">
+    <VBox layoutY="68.0" prefHeight="30.0" prefWidth="802.0" styleClass="Filler">
+        <effect>
+            <BoxBlur height="34.14" width="0.0"/>
+        </effect>
+    </VBox>
+    <AnchorPane layoutY="28.0" prefHeight="46.0" prefWidth="801.0" styleClass="MidPane">
+        <children>
+            <JFXTextField fx:id="filterField" layoutX="601.0" layoutY="14.0" prefHeight="26.0" prefWidth="198.0"
+                          promptText="Search">
+                <font>
+                    <Font name="Trebuchet MS" size="12.0"/>
+                </font>
+            </JFXTextField>
+        </children>
+    </AnchorPane>
+    <BorderPane prefHeight="30.0" prefWidth="801.0" styleClass="BorderPane">
+        <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="174.0" BorderPane.alignment="CENTER">
+                <JFXCheckBox fx:id="checkBox" alignment="BOTTOM_RIGHT" checkedColor="#2c2c2c" contentDisplay="CENTER"
+                             prefHeight="10.0" prefWidth="10.0" styleClass="BorderIcons" text=" "
+                             unCheckedColor="#ffeaea">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ADJUST" onMouseClicked="#max" size="10"
+                                             styleClass="BorderIcons" translateX="-2.0"
+                                             wrappingWidth="6.857142925262451"/>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                </JFXCheckBox>
+                <FontAwesomeIconView fill="WHITE" glyphName="MAP_PIN" onMouseClicked="#max" size="15"
+                                     styleClass="BorderIcons" wrappingWidth="6.857142925262451">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="15.0" top="7.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="RANDOM" layoutX="103.0" layoutY="33.0"
+                                     onMouseClicked="#addRandomPeeps" size="15" styleClass="BorderIcons"
+                                     wrappingWidth="6.857142925262451">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="20.0" top="10.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="MINUS" onMouseClicked="#min" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets left="5.0" right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+                <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" onMouseClicked="#close" size="15"
+                                     styleClass="BorderIcons">
+                    <HBox.margin>
+                        <Insets right="15.0" top="5.0"/>
+                    </HBox.margin>
+                </FontAwesomeIconView>
+            </HBox>
+        </right>
+        <left>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Display Employee"
+                  textAlignment="CENTER" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="4.0"/>
+                </BorderPane.margin>
+                <font>
+                    <Font name="Trebuchet MS Italic" size="21.0"/>
+                </font>
+            </Text>
+        </left>
+    </BorderPane>
+    <TableView fx:id="tableView" layoutX="-5.0" layoutY="78.0" prefHeight="270.0" prefWidth="781.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+               AnchorPane.topAnchor="78.0">
+        <columns>
+            <TableColumn fx:id="IDCol" maxWidth="500.0" prefWidth="50.0" text="ID"/>
+            <TableColumn fx:id="fNameCol" minWidth="-Infinity" prefWidth="100.0" text="First Name"/>
+            <TableColumn fx:id="lNameCol" minWidth="-Infinity" prefWidth="96.0" text="Last Name"/>
+            <TableColumn fx:id="rankCol" maxWidth="100.0" text="Rank"/>
+            <TableColumn fx:id="addressCol" minWidth="-Infinity" prefWidth="75.0" text="Address"/>
+            <TableColumn fx:id="dojCol" minWidth="-Infinity" prefWidth="75.0" text="DOJ"/>
+            <TableColumn fx:id="uniCol" minWidth="-Infinity" prefWidth="75.0" text="Uni"/>
+            <TableColumn fx:id="fieldCol" minWidth="-Infinity" prefWidth="100.0" text="Field"/>
+            <TableColumn fx:id="posCol" minWidth="-Infinity" prefWidth="75.0" text="Title"/>
+            <TableColumn fx:id="salaryCol" minWidth="-Infinity" prefWidth="50.0" text="Salary"/>
+        </columns>
+        <contextMenu>
+            <ContextMenu fx:id="myMenu">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#doDelete" text="Delete"/>
+                    <MenuItem mnemonicParsing="false" onAction="#doUpdate" text="Edit"/>
+                </items>
+            </ContextMenu>
+        </contextMenu>
+    </TableView>
+</AnchorPane>
