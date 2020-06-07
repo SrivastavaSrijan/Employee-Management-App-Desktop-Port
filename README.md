@@ -1,5 +1,3 @@
-# employee-management-app-desktop
-
 # Employee Management App :construction_worker:
 
 * A simple OpenJavaFX11 app to add,edit and delete employee.
